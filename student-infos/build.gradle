@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.studentinfos'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'org.hibernate:hibernate-core:5.5.7.Final'
+    implementation 'org.hibernate:hibernate-entitymanager:5.5.7.Final'
+    //runtimeOnly 'com.h2database:h2:1.4.200'
+
+  //  runtimeOnly 'org.postgresql:postgresql:42.3.1'
+    implementation 'mysql:mysql-connector-java:8.0.28'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
